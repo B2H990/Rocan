@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Occisor",
+  "name": "Occisor",
+  "description": "A special modded client that gives H U G E benefits to the user experience",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/Sheerblaze/Occisor+",
+  "updateUrl": "",
+  "authorList": ["Frontear"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
