@@ -35,74 +35,74 @@ import java.util.stream.Collectors;
 public class AutoCrystal extends Module {
 
     @Clamp(minimum = "1", maximum = "13")
-    @Setting("EnemyRange")
+    @Mafia.Occisor.setting.annotation.Setting("EnemyRange")
     public float enemyRange = 13f;
 
     @Clamp(minimum = "1", maximum = "6")
-    @Setting("BreakRange")
+    @Mafia.Occisor.setting.annotation.Setting("BreakRange")
     public float breakRange = 6f;
 
     @Clamp(minimum = "1", maximum = "6")
-    @Setting("PlaceRange")
+    @Mafia.Occisor.setting.annotation.Setting("PlaceRange")
     public float placeRange = 6f;
 
     @Clamp(maximum = "30")
-    @Setting("PlaceDelay")
+    @Mafia.Occisor.setting.annotation.Setting("PlaceDelay")
     public int placeDelay = 0;
 
     @Clamp(maximum = "6")
-    @Setting("Wallrange")
+    @Mafia.Occisor.setting.annotation.Setting("Wallrange")
     public float wallRange = 6f;
 
     @Clamp(minimum = "1", maximum = "100")
-    @Setting("APS")
+    @Mafia.Occisor.setting.annotation.Setting("APS")
     public int aps = 40;
 
     @Clamp(maximum = "36")
-    @Setting("MinDamage")
+    @Mafia.Occisor.setting.annotation.Setting("MinDamage")
     public float minDmg = 8f;
 
     @Clamp(maximum = "36")
-    @Setting("FaceplaceHP")
+    @Mafia.Occisor.setting.annotation.Setting("FaceplaceHP")
     public float facePlace = 10f;
 
     @Clamp(minimum = "0", maximum = "100")
-    @Setting(ArmourFucker)
+    @Mafia.Occisor.setting.annotation.Setting(ArmourFucker)
     public int MinarmourHP = 25f;
 
     @Clamp()
-    @Setting("MaxSelfDamage")
+    @Mafia.Occisor.setting.annotation.Setting("MaxSelfDamage")
     public float maxSelfDamage = 8f;
 
     @Clamp(maximum = "15")
-    @Setting("HitAttempts")
+    @Mafia.Occisor.setting.annotation.Setting("HitAttempts")
     public int hitAttempts = 15;
 
-    @Setting("Place")
+    @Mafia.Occisor.setting.annotation.Setting("Place")
     public boolean place = true;
 
-    @Setting("pSilent")
+    @Mafia.Occisor.setting.annotation.Setting("pSilent")
     public boolean pSilent = true;
 
-    @Setting("AutoSwitch")
+    @Mafia.Occisor.setting.annotation.Setting("AutoSwitch")
     public boolean autoSwitch = false;
 
-    @Setting("Announcer")
+    @Mafia.Occisor.setting.annotation.Setting("Announcer")
     public boolean announcer;
 
-    @Setting("Rainbow")
+    @Mafia.Occisor.setting.annotation.Setting("Rainbow")
     public boolean rgb = true;
 
-    @Setting("Color")
+    @Mafia.Occisor.setting.annotation.Setting("Color")
     public Color color = new Color(255, 0, 0);
 
-    @Setting("DamageColor")
+    @Mafia.Occisor.setting.annotation.Setting("DamageColor")
     public Color dmgColor = new Color(0, 0, 255);
 
-    @Setting("Multiplace")
+    @Mafia.Occisor.setting.annotation.Setting("Multiplace")
     public boolean Multiplace = false;
 
-    @Setting ("Offhandswing")
+    @Mafia.Occisor.setting.annotation.Setting("Offhandswing")
     public boolean OFF_HAND = true;
 
     //have not made all the settings yet
