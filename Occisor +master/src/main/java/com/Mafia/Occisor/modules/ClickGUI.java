@@ -1,10 +1,9 @@
 package com.Mafia.Occisor.modules;
 
 import com.Mafia.Occisor.managers.GUIManager;
-import com.Mafia.Occisor.modules.api.Module;
 import org.lwjgl.input.Keyboard;
 
-public class ClickGUI extends Module {
+public class ClickGUI extends com.frontear.hephaestus.modules.api.Module {
     public ClickGUI() {
         super("ClickGui", Keyboard.KEY_K);
     }
