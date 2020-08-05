@@ -56,6 +56,8 @@ public class Module {
         onToggle(getState());
     }
 
+    public void setup () {}
+
     private String getModuleName() {
         return name + " " + "[" + Keyboard.getKeyName(module.getKeyCode()) + "]";
     }

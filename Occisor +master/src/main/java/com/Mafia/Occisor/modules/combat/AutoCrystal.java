@@ -33,7 +33,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 public class AutoCrystal extends Module {
-
+/*
     @Clamp(minimum = "1", maximum = "13")
     @Mafia.Occisor.setting.annotation.Setting("EnemyRange")
     public float enemyRange = 13f;
@@ -103,7 +103,12 @@ public class AutoCrystal extends Module {
     public boolean Multiplace = false;
 
     @Mafia.Occisor.setting.annotation.Setting("Offhandswing")
-    public boolean OFF_HAND = true;
+    public boolean OFF_HAND = true; */
+
+    public void setup(){
+
+    }
+
 
     //have not made all the settings yet
     //we need an arraylist

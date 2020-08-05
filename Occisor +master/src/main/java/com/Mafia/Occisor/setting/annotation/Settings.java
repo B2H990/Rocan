@@ -9,6 +9,7 @@ public class Settings {
     //setup stuff
     public String name;
     public Module parent;
+    public String settingMode;
 
     //boolean values
     public boolean toggled;
@@ -27,6 +28,7 @@ public class Settings {
         this.name = name;
         this.parent = parent;
         this.toggled = toggled;
+        this.settingMode = "boolean";
     }
 
     public Settings(String name, Module parent, int intVal, int intMin, int intMax){
@@ -35,6 +37,7 @@ public class Settings {
         this.intVal = intVal;
         this.intMin = intMin;
         this.inMax = intMax;
+        this.settingMode = "int";
     }
 
     public Settings(String name, Module parent, String mode, ArrayList<String> Modes){
@@ -42,7 +45,11 @@ public class Settings {
         this.parent = parent;
         this.mode = mode;
         this.Modes = Modes;
+        this.settingMode = "combo";
     }
-    
+
+    public Module getParent() {
+        return parent;
+    }
 
 }
