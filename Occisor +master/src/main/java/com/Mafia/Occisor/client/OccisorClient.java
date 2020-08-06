@@ -1,10 +1,14 @@
 package com.Mafia.Occisor.client;
 
 import com.Mafia.Occisor.managers.ModuleManager;
+import com.Mafia.Occisor.managers.SettingsManager;
 import com.Mafia.Occisor.managers.UIManager;
 import com.Mafia.Occisor.modules.api.Module;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -17,9 +21,14 @@ public class HephaestusClient {
     public ModuleManager moduleManager;
     public UIManager uiManager;
 
+
+    //classes
+    public SettingsManager settingsManager;
+
     public HephaestusClient() {
         moduleManager = new ModuleManager();
         uiManager = new UIManager();
+
 
         Display.setTitle(CLIENT_NAME + " " + "Client" + " " + CLIENT_VERSION);
     }
@@ -33,6 +42,8 @@ public class HephaestusClient {
             }
         }
     }
+
+
 
     @SubscribeEvent
     public void onUpdate(TickEvent.PlayerTickEvent event) {
@@ -55,5 +66,17 @@ public class HephaestusClient {
         for (Module module : moduleManager.moduleList) {
             module.onKey();
         }
+    }
+
+    public void init(FMLInitializationEvent event){
+        settingsManager = new SettingsManager();
+    }
+
+    public void preinit(FMLPreInitializationEvent event){
+
+    }
+
+    public void postinit(FMLPostInitializationEvent event){
+
     }
 }

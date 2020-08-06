@@ -1,5 +1,6 @@
 package com.frontear.occisor;
 
+import com.Mafia.Occisor.client.HephaestusClient;
 import com.frontear.hephaestus.client.HephaestusClient;
 import com.frontear.hephaestus.client.HephaestusCommands;
 import net.minecraftforge.common.MinecraftForge;
