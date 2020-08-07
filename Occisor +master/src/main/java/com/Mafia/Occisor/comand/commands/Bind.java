@@ -2,7 +2,7 @@ package com.Mafia.Occisor.commands;
 
 import com.Mafia.Occisor.Occisor;
 import com.Mafia.Occisor.commands.api.Command;
-import com.Mafia.Occisor.modules.api.Module;
+import com.Mafia.Occisor.modules.Module;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 

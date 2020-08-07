@@ -1,6 +1,6 @@
 package com.Mafia.Occisor.managers;
 
-import com.Mafia.Occisor.Hephaestus;
+import com.Mafia.Occisor.Occisor;
 import com.Mafia.Occisor.commands.*;
 import com.Mafia.Occisor.commands.api.Command;
 import net.minecraft.util.text.Style;
@@ -14,7 +14,7 @@ public class CommandManager {
     public final String commandPrefix;
     public final Style chatFormat;
     public final String responsePrefix = new TextComponentString(new TextComponentString("[").setStyle(new Style().setColor(TextFormatting.GRAY)).getFormattedText()
-    + new TextComponentString(Hephaestus.client.CLIENT_NAME).setStyle(new Style().setColor(TextFormatting.GOLD)).getFormattedText()
+    + new TextComponentString(Occisor.client.CLIENT_NAME).setStyle(new Style().setColor(TextFormatting.GOLD)).getFormattedText()
     + new TextComponentString("] ").setStyle(new Style().setColor(TextFormatting.GRAY)).getFormattedText()).getFormattedText();
 
     public CommandManager(String prefix, Style format) {

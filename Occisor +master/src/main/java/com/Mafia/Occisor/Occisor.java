@@ -1,8 +1,8 @@
-package com.frontear.occisor;
+package com.Mafia.Occisor;
 
 import com.Mafia.Occisor.client.HephaestusClient;
-import com.frontear.hephaestus.client.HephaestusClient;
-import com.frontear.hephaestus.client.HephaestusCommands;
+import com.Mafia.Occisor.client.HephaestusCommands;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
         version = "1.0",
         acceptedMinecraftVersions = "[1.12.2]"
 )
-public class Hephaestus
+public class Occisor
 {
     public static HephaestusClient client;
     public static HephaestusCommands commands;

@@ -1,7 +1,7 @@
 package com.Mafia.Occisor.managers;
 
 import com.Mafia.Occisor.modules.*;
-import com.Mafia.Occisor.modules.api.Module;
+import com.Mafia.Occisor.modules.Module;
 
 import java.util.ArrayList;
 

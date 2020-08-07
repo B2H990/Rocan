@@ -3,7 +3,7 @@ package com.Mafia.Occisor.client;
 import com.Mafia.Occisor.managers.ModuleManager;
 import com.Mafia.Occisor.managers.SettingsManager;
 import com.Mafia.Occisor.managers.UIManager;
-import com.Mafia.Occisor.modules.api.Module;
+import com.Mafia.Occisor.modules.Module;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

@@ -1,7 +1,7 @@
 package com.Mafia.Occisor.managers;
 
 import com.Mafia.Occisor.Occisor;
-import com.Mafia.Occisor.modules.api.Module;
+import com.Mafia.Occisor.modules.Module;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.GlStateManager;
