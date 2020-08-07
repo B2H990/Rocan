@@ -84,6 +84,9 @@ public class AutoCrystal extends Module {
 
     @Mafia.Occisor.setting.annotation.Setting("pSilent")
     public boolean pSilent = true;
+    
+    @Mafia.Occisor.setting.annotation.Setting("1.13")
+    public boolean 1.13 = true;
 
     @Mafia.Occisor.setting.annotation.Setting("AutoSwitch")
     public boolean autoSwitch = false;
