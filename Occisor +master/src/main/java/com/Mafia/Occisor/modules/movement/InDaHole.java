@@ -18,6 +18,8 @@ import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
+public class InDaHole extends Module {
+
     @Setting("mode")
     @Mode({"HoleTP", "ReverseStep"})
     public String mode = "ReverseStep";
