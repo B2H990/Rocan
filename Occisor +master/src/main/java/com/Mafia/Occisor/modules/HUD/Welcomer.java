@@ -1,4 +1,4 @@
-package me.zeroeightsix.kami.module.modules.HUD;
+package Mafia.Occisor.modules.HUD;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 import java.awt.Color;
