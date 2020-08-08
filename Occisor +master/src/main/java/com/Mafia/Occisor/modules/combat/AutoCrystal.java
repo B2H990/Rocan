@@ -234,6 +234,44 @@ public class AutoCrystal extends Module {
             }
         }
     }
+    
+        @Subscribe
+    public void onRender3D(Render3DEvent event) {
+        if (render != null) {
+            final AxisAlignedBB bb = new AxisAlignedBB(render.getX() - mc.getRenderManager().viewerPosX, render.getY() - mc.getRenderManager().viewerPosY + 1, render.getZ() - mc.getRenderManager().viewerPosZ, render.getX() + 1 - mc.getRenderManager().viewerPosX, render.getY() + 0 - mc.getRenderManager().viewerPosY, render.getZ() + 1 - mc.getRenderManager().viewerPosZ);
+            if (RenderUtil.isInViewFrustrum(new AxisAlignedBB(bb.minX + mc.getRenderManager().viewerPosX, bb.minY + mc.getRenderManager().viewerPosY, bb.minZ + mc.getRenderManager().viewerPosZ, bb.maxX + mc.getRenderManager().viewerPosX, bb.maxY + mc.getRenderManager().viewerPosY, bb.maxZ + mc.getRenderManager().viewerPosZ))) {
+                final Color rainbow = new Color(RenderUtil.getRainbow(3000, 0, 0.85f));
+                if (rgb) {
+                    RenderUtil.drawESP(bb, rainbow.getRed(), rainbow.getGreen(), rainbow.getBlue(), 40F);
+                    RenderUtil.drawESPOutline(bb, rainbow.getRed(), rainbow.getGreen(), rainbow.getBlue(), 255f, 1f);
+                    final double posX = render.getX() - ((IRenderManager) mc.getRenderManager()).getRenderPosX();
+                    final double posY = render.getY() - ((IRenderManager) mc.getRenderManager()).getRenderPosY();
+                    final double posZ = render.getZ() - ((IRenderManager) mc.getRenderManager()).getRenderPosZ();
+                    RenderUtil.renderTag(dmg, posX + 0.5, posY - 0.2, posZ + 0.5, dmgColor.getRGB());
+                    GlStateManager.enableDepth();
+                    GlStateManager.depthMask(true);
+                    GlStateManager.enableLighting();
+                    GlStateManager.disableBlend();
+                    GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+                    RenderHelper.disableStandardItemLighting();
+                }
+                if (!rgb) {
+                    RenderUtil.drawESP(bb, color.getRed(), color.getGreen(), color.getBlue(), 40F);
+                    RenderUtil.drawESPOutline(bb, color.getRed(), color.getGreen(), color.getBlue(), 255f, 1f);
+                    final double posX = render.getX() - ((IRenderManager) mc.getRenderManager()).getRenderPosX();
+                    final double posY = render.getY() - ((IRenderManager) mc.getRenderManager()).getRenderPosY();
+                    final double posZ = render.getZ() - ((IRenderManager) mc.getRenderManager()).getRenderPosZ();
+                    RenderUtil.renderTag(dmg, posX + 0.5, posY - 0.2, posZ + 0.5, dmgColor.getRGB());
+                    GlStateManager.enableDepth();
+                    GlStateManager.depthMask(true);
+                    GlStateManager.enableLighting();
+                    GlStateManager.disableBlend();
+                    GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+                    RenderHelper.disableStandardItemLighting();
+                }
+            }
+        }
+    }
 
 
 
@@ -283,6 +321,12 @@ public class AutoCrystal extends Module {
         private PlaceLocation(int xIn, int yIn, int zIn) {
             super(xIn, yIn, zIn);
         }
+    }
+    
+        private boolean canPlaceCrystal(final BlockPos blockPos) {
+        final BlockPos boost = blockPos.add(0, 1, 0);
+        final BlockPos boost2 = blockPos.add(0, 2, 0);
+        return (mc.world.getBlockState(blockPos).getBlock() == Blocks.BEDROCK || mc.world.getBlockState(blockPos).getBlock() == Blocks.OBSIDIAN) && mc.world.getBlockState(boost).getBlock() == Blocks.AIR && mc.world.getBlockState(boost2).getBlock() == Blocks.AIR && mc.world.getEntitiesWithinAABB((Class) Entity.class, new AxisAlignedBB(boost)).isEmpty() && mc.world.getEntitiesWithinAABB((Class) Entity.class, new AxisAlignedBB(boost2)).isEmpty();
     }
 
 
