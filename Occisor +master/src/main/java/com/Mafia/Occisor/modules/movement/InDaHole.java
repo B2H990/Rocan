@@ -8,6 +8,7 @@ import Mafia.Occisor.setting.annotation.Mode;
 import Mafia.Occisor.setting.annotation.Setting;
 import Mafia.Occisor.event.Subscribe;
 import Mafia.Occisor.event.types.EventType;
+import com.Mafia.Occisor.modules.Module;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,7 @@ import net.minecraft.util.math.MathHelper;
     private int packets;
     private boolean jumped = false;
 
-    public class InDaHole extends Module{
+    public class InDaHole extends Module {
 
     @Subscribe
     public void onUpdate(UpdateEvent event) {

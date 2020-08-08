@@ -15,13 +15,25 @@ public class ModuleManager {
         moduleList.add(new NoFOV());
         moduleList.add(new QuickEat());
         moduleList.add(new AutoCrystal());
-        moduleList.add(new InDaHole());
+        moduleList.add(new Mafia.Occisor.modules.movement.InDaHole());
         moduleList.add(new Speed());
 
         moduleList.add(new Panic());
         moduleList.add(new Rainbow());
+    }
 
-        moduleList.add(new ClickGUI());
+    public static ArrayList<Module> getModules(){
+        return moduleList;
+    }
+
+    public static ArrayList<Module> getModuleByCategory(Module.Category category) {
+        ArrayList<Module> moduleByCategory = new ArrayList<>();
+        for (Module module : moduleList) {
+            if (module.getCategory() == category){
+                moduleByCategory.add(module);
+            }
+        }
+        return moduleByCategory;
     }
 
     public ArrayList<Module> getEnabledModules() {

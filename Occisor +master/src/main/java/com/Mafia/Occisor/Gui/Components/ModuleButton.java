@@ -1,8 +1,12 @@
 package com.Mafia.Occisor.Gui.Components;
 
+import com.Mafia.Occisor.modules.Module;
+import net.minecraft.client.gui.Gui;
+
+
 public class ModuleButton {
 
-    public String Module;
+    public Module module;
 
     public boolean expanded = false;
     public boolean toggled = false;
@@ -41,9 +45,9 @@ public class ModuleButton {
 
 
 
-    public ModuleButton(String Module, boolean expanded, boolean toggled, boolean highlighted, boolean FrameHighlighted,int xPos, int yPos, int width, int height, int xPosText, int yPosText, int textColor, int textColorToggled, int textColorHighlighted, int textColorToggledHighlighted, int textColorFrameHighlighted, int textColorToggledFrameHighlighted, int edgeWidth, int edgeColor, int edgeColorToggled, int edgeColorHighlighted, int edgeColorToggledHighlighted, int edgeColorFrameHighlighted, int edgeColorToggledFrameHighlighted,     int baseColor, int baseColorToggled, int baseColorHighlighted, int baseColorToggledHighlighted, int baseColorFrameHighlighted, int baseColorToggledFrameHighlighted) {
+    public ModuleButton(Module module, boolean expanded, boolean toggled, boolean highlighted, boolean FrameHighlighted, int xPos, int yPos, int width, int height, int xPosText, int yPosText, int textColor, int textColorToggled, int textColorHighlighted, int textColorToggledHighlighted, int textColorFrameHighlighted, int textColorToggledFrameHighlighted, int edgeWidth, int edgeColor, int edgeColorToggled, int edgeColorHighlighted, int edgeColorToggledHighlighted, int edgeColorFrameHighlighted, int edgeColorToggledFrameHighlighted, int baseColor, int baseColorToggled, int baseColorHighlighted, int baseColorToggledHighlighted, int baseColorFrameHighlighted, int baseColorToggledFrameHighlighted) {
 
-        this.Module = Module;
+        this.module = module;
 
         this.expanded = expanded;
         this.toggled = toggled;
@@ -89,6 +93,13 @@ public class ModuleButton {
     private int getFrameYpos(Frame frame){
         return frame.xPos;
     }
+
+
+    public void drawScreen(int mouseX, int mouseY, float partialTicks){
+        Gui.drawRect(xPos, yPos, xPos + width, yPos + height, 0x000833);
+    }
+
+
 
 }
 
