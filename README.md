@@ -1,2 +1,2 @@
 # Rocan / Occisor
-This is mafias Rocan skid or atleast I believe it to be partialy rocan hence the inclusion of commit history.
+Skid of tons of random shit by mafia. Large amounts of rocan code hence repo name.
